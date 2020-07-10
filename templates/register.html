@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<HTML>
+<HEAD>
+    <title>Registraction</title>
+</HEAD>
+<body>
+<form action="/reg" method="post">
+    {% csrf_token %}
+  <div class="container">
+      <center>
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+          <label for="firstname"><b>firstname</b></label>
+    <input type="text" placeholder="Enter the first nae" name="first_name" required>
+
+    <label for="last_name"><b>last name</b></label>
+    <input type="text" placeholder="Enter the last name" name="last_name" required>
+
+     <label for="user_name"><b>user name</b></label>
+    <input type="text" placeholder="Enter the user name" name="user_name" required>
+
+
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password1" required>
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+</center>
+  </div>
+<center>  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</center>
+
+</form>
+</body>
+</HTML>

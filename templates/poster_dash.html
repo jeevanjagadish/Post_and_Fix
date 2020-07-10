@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.6">
+        <link rel="shortcut icon" href="img/title.jpg" />
+        <title>Dashboard</title>
+
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/main.css">
+        <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    
+    </head>
+<body>
+    <header>
+        <div class="navbar1">
+            <img src="img/logo.png" alt="logo">
+            <a href="contact.html">Contact Us</a>
+            <a href="registration.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="#working">How It Works</a>
+            <a href="#about">About Us</a>
+            <a href="index.html">Home</a>
+        </div>         
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column nav-side">
+                        <li class="nav-item text-center">
+                            <i class="fas  fa-user-circle"></i>
+                            <h5>Kishore</h5>
+                            <p class=" mb-0">Reckonsys</p>
+                            <p>Admin</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="aProfile"href="javascript:p_profile()">
+                                <i class="fas fa-user"></i>
+                                Profile <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="aPosts" href="javascript:p_posts()">
+                                <i class="fas fa-clipboard-list"></i> 
+                                Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="aAwards" href="javascript:p_awards()">
+                                <i class="fas fa-trophy"></i>
+                                Awarded</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="aMessage" href="javascript:p_message()">
+                                <i class="fas fa-envelope"></i>
+                                Messages</a>
+                        </li>
+                    </ul>   
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex  row justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="col-md-4">
+                        <h1 class="h2">Poster Dashboard</h1>
+                    </div>
+                    <div class="col-md-6 offset-md-2">
+                        <div class="btn-toolbar mb-2 mb-md-0">
+
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary mr-2">Add User</button> -->
+                            <button type="button" class="btn btn-sm btn-outline-secondary mr-2" data-toggle="modal" data-target="#addUser">Add User</button>
+                            
+                            <!-- ------------Add user modal---------- -->
+                            <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Project Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <form>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">Name</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+        
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">Email</span>
+                                                        </div>
+                                                        <input type="email" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+        
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">Contact</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">User Name</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">Password</span>
+                                                        </div>
+                                                        <input type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+                                                    
+                                                    <button class="btn btn-primary btn-block" type="button">Add</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!-- <button type="button" class="btn btn-primary">Bid</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-sm btn-outline-secondary mr-2" data-toggle="modal" data-target="#viewUser">View User</button>
+
+                            <!-- ------------view user modal---------- -->
+                            <div class="modal fade" id="viewUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Project Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Jeevan Jagdish</td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Floyd Castelino</td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ramachandra Mahale</td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dilip Singh</td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mahesh kumar</td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!-- <button type="button" class="btn btn-primary">Bid</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn-group mr-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Poster</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='fixer_dash.html'">Fixer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------poster profile------- -->
+                <div id="p_profile">
+                    <table class="table table-striped">
+                        <!-- <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Company Name</th>
+                            </tr>
+                        </thead> -->
+                        <tbody>
+                            <tr>
+                                <th>Organization Name</th>
+                                <td>Reckonsys Tech Labs</td>
+                            </tr>
+                            <tr>
+                                <th>Organization Type</th>
+                                <td>IT Firm</td>
+                            </tr>
+                            <tr>
+                                <th>Name</th>
+                                <td>Kishore</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>kishore@reckonsys.com</td>
+                            </tr>
+                            <tr>
+                                <th>Country</th>
+                                <td>India</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>Enzyme Tech Park, #1604, First Floor, 22nd Cross Road, 25th Main Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102</td>
+                            </tr>
+                            <tr>
+                                <th>Phone Number</th>
+                                <td>9999999999</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- -------------poster posts------- -->
+                <div id="p_posts">
+                    <h4 class="text-center">Posted Projects</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Company Name</th>
+                                <th scope="col">Project Title</th>
+                                <th scope="col">Discription</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mphasis</td>
+                                <td></td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffff</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterPostsModal">View</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Reckonsys tech labs</td>
+                                <td>Software</td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffff</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterPostsModal">View</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Reckonsys tech labs</td>
+                                <td>Software</td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffff</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterPostsModal">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- ------posted project modal---- -->
+                    <div class="modal fade" id="posterPostsModal" data-backdrop="static" >
+                        <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Project Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Title</th>
+                                            <td>post-fix</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Technology</th>
+                                            <td>Software</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Discription</th>
+                                            <td>bvbs sndjns snjn snjdn snvjn skndjd</td>
+                                        </tr>
+                                        <tr>
+                                            <th>My Duration</th>
+                                            <td>10 months</td>
+                                        </tr>
+                                        <tr>
+                                            <th>My Budget</th>
+                                            <td>10000$</td>
+                                        </tr>
+                                    </table>
+                                    <div class="alert alert-dark" role="alert">
+                                        <h5 class="text-center">Applied Companies</h5>
+                                    </div>
+                                    
+                                    <table class="table-striped table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Company Name</th>
+                                                <th>Website</th>
+                                                <th>Email</th>
+                                                <th>Contact</th>
+                                                <th>Comment</th>
+                                                <th>Budget</th>
+                                                <th>Time</th>
+                                                <th>Ratings</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Reckonsys tech labs</td>
+                                                <td>www.reck.com</td>
+                                                <td>reck@reck.com</td>
+                                                <td>9999999999</td>
+                                                <td>vhbsb  js sjd sdhu sdvun</td>
+                                                <td>12000$</td>
+                                                <td>6 months</td>
+                                                <td>4/5</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><button class="btn btn-sm btn-primary mb-2">Under Review</button></td>
+                                                <td><button class="btn btn-sm btn-success mb-2">Award</button></td>
+                                                <td><button class="btn btn-sm btn-danger">Reject</button></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <!-- <button type="button" class="btn btn-primary">Bid</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#postModal">Post Project</button>
+
+                    <!-- -------post project modal-------- -->
+                    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Project Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">Project Title</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Technology</label>
+                                                </div>
+                                                <select class="custom-select" id="inputGroupSelect01">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Software</option>
+                                                    <option value="2">Hardwere</option>
+                                                    <!-- <option value="3">Three</option> -->
+                                                </select>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Discription</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload Documents</span>
+                                                </div>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">Duration</span>
+                                                </div>
+                                                <input type="text" placeholder="In Months" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">Budget</span>
+                                                </div>
+                                                <input type="text" placeholder="In USD" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                            
+                                            <button class="btn btn-primary btn-block" type="button">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <!-- <button type="button" class="btn btn-primary">Bid</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------poster Awarded---------- -->
+                <div id="p_awarded">
+                    <h4 class="text-center">Awarded Projects</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Company Name</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Discription</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Reckonsys tech labs</td>
+                                <td>Software</td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffff</td>
+                                <td>10000$</td>
+                                <td>10 months</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterAwardedModal">Rate</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Reckonsys tech labs</td>
+                                <td>Software</td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffffbhbd</td>
+                                <td>10000$</td>
+                                <td>10 months</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterAwardedModal">Rate</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Reckonsys tech labs</td>
+                                <td>Software</td>
+                                <td>aaaaaa bbbbbb cccccc dddddd eeee fffff</td>
+                                <td>10000$</td>
+                                <td>10 months</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#posterAwardedModal">Rate</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- ------modal---- -->
+                    <div class="modal fade" id="posterAwardedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Review</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Review</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                            <h6 class="text-center">Rate</h6>
+                                            <div class="btn-group text-center btn-group-toggle btn-block mb-3" data-toggle="buttons">
+                                                <label class="btn btn-secondary active">
+                                                  <input type="radio" name="options" id="option1"> 1
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                  <input type="radio" name="options" id="option2"> 2
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                  <input type="radio" name="options" id="option3"> 3
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option3"> 4
+                                                  </label>
+                                                  <label class="btn btn-secondary">
+                                                    <input type="radio" name="options" id="option3"> 5
+                                                  </label>
+                                              </div>
+                                            <button class="btn btn-primary btn-block" type="button">Submit</button>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- ---------poster Message---------- -->
+                <div id="p_message">
+                    
+                    
+
+
+                    <div class="container main-section">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-12 left-sidebar">
+                                <div class="input-group searchbox">
+                                    <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default search-icon" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="left-chat">
+                                    <ul>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/business-emoji.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>luis yankee</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/man-student-twitter.png">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>joi chak</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/th.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>lajy ion</p>
+                                                <span><i class="fa fa-circle orange" aria-hidden="true"></i> offline</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/woman-office-worker.png">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>lod kine</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/business-emoji.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>nik minaj</p>
+                                                <span><i class="fa fa-circle orange" aria-hidden="true"></i> offline</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/man-student-twitter.png">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>Win sina</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/th.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>joi chak</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/woman-office-worker.png">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>lajy ion</p>
+                                                <span><i class="fa fa-circle orange" aria-hidden="true"></i> offline</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/business-emoji.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>lod kine</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/man-student-twitter.png">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>nik minaj</p>
+                                                <span><i class="fa fa-circle orange" aria-hidden="true"></i> offline</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="chat-left-img">
+                                                <img src="img/chats/th.jpg">
+                                            </div>
+                                            <div class="chat-left-detail">
+                                                <p>Win sina</p>
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+                                            </div>
+                                        </li>  
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-12 right-sidebar">
+                                <div class="row">
+                                    <div class="col-md-12 right-header">
+                                        <div class="right-header-img">
+                                            <img src="img/chats/th.jpg">
+                                        </div>
+                                        <div class="right-header-detail">
+                                            <p>Jack Clerk</p>
+                                            <span>already 19 messages </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 right-header-contentChat">
+                                        <ul>
+                                            <li>
+                                                <div class="rightside-left-chat">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i> joi chak <small>10:00 AM,Today</small> </span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-right-chat">
+                                                    <span> <small>10:00 AM,Today</small>  nik minaj <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-left-chat">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i> joi chak <small>10:00 AM,Today</small> </span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-right-chat">
+                                                    <span> <small>10:00 AM,Today</small>  nik minaj <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-left-chat">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i> joi chak <small>10:00 AM,Today</small> </span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-right-chat">
+                                                    <span> <small>10:00 AM,Today</small>  nik minaj <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-left-chat">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i> joi chak <small>10:00 AM,Today</small> </span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-right-chat">
+                                                    <span> <small>10:00 AM,Today</small>  nik minaj <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-left-chat">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i> joi chak <small>10:00 AM,Today</small> </span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="rightside-right-chat">
+                                                    <span> <small>10:00 AM,Today</small>  nik minaj <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
+                                                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
+                                                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 right-chat-textbox">
+                                        <input type="text"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- ------modal---- -->
+                    <div class="modal fade" id="posterAwardedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Project Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <form>
+                                            <input type="text" placeholder="Bid Amount">
+                                            <input type="number" placeholder="Time in Months">
+                                            <button type="button">Bid</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+</html>

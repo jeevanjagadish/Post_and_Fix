@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+        <title>Register</title>
+        <link rel="shortcut icon" href="img/title.jpg" />
+        <!-- --------styles------------- -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style/main.css">
+    </head>
+<body>
+    <header>
+        <div class="navbar1">
+            <img src="img/logo.png" alt="logo">
+            <a href="contact.html">Contact Us</a>
+            <a href="registration.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="#working">How It Works</a>
+            <a href="#about">About Us</a>
+            <a href="index.html">Home</a>
+        </div>         
+    </header>
+
+    <div class="container1">
+        <div class="login">
+            <h1>Registration</h1>
+            <form id="reg">
+                <div>
+                    <input type="text"  id="name" placeholder="Organization Name">
+                    <div id="err_name" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="text" id="orgType" placeholder="Organization Type Eg.Hospital, Restaurant">
+                    <div id="err_orgType" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="text" id="country" placeholder="Name">
+                    <div id="err_country" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="Email">
+                    <div id="err_email" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="text" id="website" placeholder="Website">
+                </div>
+                <div>
+                    <input type="text" id="country" placeholder="Country">
+                    <div id="err_country" class="err_msg"></div>
+                </div>
+                <div>
+                    <textarea id="address" placeholder="Address"></textarea>
+                    <div id="err_address" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="text" id="phone" placeholder="Phone Number">
+                    <div id="err_phone" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="text" id="country" placeholder="UserName">
+                    <div id="err_country" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="password" id="password" placeholder="Password">
+                    <div id="err_password" class="err_msg"></div>
+                </div>
+                <div>
+                    <input type="password" id="cpassword" placeholder="Confirm Password">
+                    <div id="err_cpassword" class="err_msg"></div>
+                </div>
+                <div>
+                    <button type="button" onclick="registration()">Register</button>
+                </div>
+                <div>
+                    <a href="login.html">Already Registered?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer></footer>
+
+<!-- --------------------------scripts------------------ -->
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
